@@ -14,16 +14,13 @@ public class CambioModoAvion extends BroadcastReceiver {
             boolean modoAvion = intent.getBooleanExtra("state", true);
 
             if (modoAvion) {
-                // Modo avión activado
                 Toast.makeText(context, "Modo avión activado", Toast.LENGTH_SHORT).show();
                 realizarLlamada(context);
             } else {
-                // Modo avión desactivado
                 Toast.makeText(context, "Modo avión desactivado", Toast.LENGTH_SHORT).show();
             }
         }
     }
-
     private void realizarLlamada(Context context){
         try{
             Intent intent = new Intent(Intent.ACTION_CALL);

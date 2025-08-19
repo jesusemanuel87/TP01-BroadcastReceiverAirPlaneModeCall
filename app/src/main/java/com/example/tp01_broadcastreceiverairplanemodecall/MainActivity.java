@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         unregisterReceiver(cma);
     }
-
-
     public void permisoCall() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
                 && checkSelfPermission(Manifest.permission.CALL_PHONE)
@@ -44,5 +42,4 @@ public class MainActivity extends AppCompatActivity {
             requestPermissions(new String[]{Manifest.permission.CALL_PHONE}, 2500);
         }
     }
-
 }
